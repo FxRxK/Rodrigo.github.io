@@ -9,6 +9,10 @@
     "start_url": "./index.html?utm_source=web_app_manifest",
     "scope": "./",
     "lang": "es-ES",
+    "cache": {
+  "maxAge": 300000,
+  "maxEntries": 1000
+},
     "icons": [
         {
             "src": "./img/1024.png",
