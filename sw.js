@@ -25,30 +25,18 @@ var urlsToCache = [
 
 //Evento install
 //Instalacion del service worker y guarda en cahe los recursos
-//self.addEventListener('install',e =>{
-//    e.waitUntil(
-  //      caches.open(CACHE_NAME)
-    //    .then(cache=>{
-      //      return cache.addAll(urlsToCache)
-        //    .then(()=>{
-          //      self.skipWaiting();
-        //    });
-      //  })
-    //        .catch(err => console.log('no se ha registrado cache.',err))
-  //      );
-//});
-self.addEventListener('install', (event) => {
-    event.waitUntil(
-      caches.open('my-cache').then((cache) => {
-        return cache.addAll([
-          '/index.html',
-          '/styles.css',
-          '/script.js',
-          // Otros recursos
-        ]);
-      })
-    );
-  });
+self.addEventListener('install',e =>{
+    e.waitUntil(
+        caches.open(CACHE_NAME)
+        .then(cache=>{
+            return cache.addAll(urlsToCache)
+            .then(()=>{
+                self.skipWaiting();
+            });
+        })
+            .catch(err => console.log('no se ha registrado cache.',err))
+        );
+});
 //evento activate
 //Que la app funcione sin conexion
 self.addEventListener('activate',e=>{
