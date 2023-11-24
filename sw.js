@@ -1,26 +1,32 @@
 //asignar nombre y version de la cache
 const CACHE_NAME = 'V1_CACHE_Rodrigo Zamora Solis';
-var urlsToCache = [
+var urlsToCache = [ 
     './',
+      '/index.html',
+  '/styles.css',
+  '/script.js',
     './css/styles.css',
-    './img/favicon.png',
+    './img/favicon.ico',
 './img/1.png',
 './img/2.png',
 './img/3.png',
 './img/4.png',
 './img/5.png',
 './img/6.png',
-'./img/facebook.png',
-'./img/instagram.png',
-'./img/twitter.png',
+'./img/16.png',
+'./img/32.png',
+'./img/64.png',
+'./img/96.png',
+'./img/128.png',
+'./img/192.png',
 './img/1024.png',
 './img/512.png',
 './img/256.png',
-'./img/128.png',
-'./img/96.png',
-'./img/64.png',
-'./img/32.png',
-'./img/16.png',
+'./img/384.png',
+'./img/facebook.png',
+'./img/instagram.png',
+'./img/twitter.png',
+'./img/fondo3d.png',
 ];
 
 //Evento install
