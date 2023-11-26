@@ -1,12 +1,12 @@
 //asignar nombre y version de la cache
 const CACHE_NAME = 'V1_CACHE_Rodrigo Zamora Solis';
 var urlsToCache = [ 
-    './',
-      '/index.html',
-  '/styles.css',
-  '/script.js',
-    './css/styles.css',
-    './img/favicon.ico',
+'./',
+'/index.html',
+'/styles.css',
+'/script.js',
+'./css/styles.css',
+'./img/favicon.ico',
 './img/1.png',
 './img/2.png',
 './img/3.png',
@@ -30,7 +30,7 @@ var urlsToCache = [
 ];
 
 //Evento install
-//Instalacion del service worker y guarda en cahe los recursos
+//Instalacion del service worker y guarda en cache los recursos
 self.addEventListener('install',e =>{
     e.waitUntil(
         caches.open(CACHE_NAME)
@@ -43,6 +43,7 @@ self.addEventListener('install',e =>{
             .catch(err => console.log('no se ha registrado cache.',err))
         );
 });
+
 //evento activate
 //Que la app funcione sin conexion
 self.addEventListener('activate',e=>{
@@ -80,4 +81,4 @@ self.addEventListener('fetch', e => {
                     return fetch (e.request)
                 })
             );
-        });
+    });
